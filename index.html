@@ -60,14 +60,16 @@
                     <circle cx="650" cy="40" r="2.5" fill="rgba(29,155,240,0.35)" />
                     <circle cx="900" cy="200" r="2" fill="rgba(29,155,240,0.3)" />
                     <circle cx="100" cy="200" r="2" fill="rgba(29,155,240,0.25)" />
-                    <text x="60" y="100" font-family="'Courier New',monospace" font-size="13"
-                        fill="rgba(29,155,240,0.25)">$ python -m venv env</text>
-                    <text x="60" y="122" font-family="'Courier New',monospace" font-size="13"
-                        fill="rgba(0,186,124,0.3)">✓ django-admin startproject porfolio</text>
-                    <text x="60" y="144" font-family="'Courier New',monospace" font-size="13"
-                        fill="rgba(255,255,255,0.12)">$ pip install django</text>
-                    <text x="60" y="166" font-family="'Courier New',monospace" font-size="13"
-                        fill="rgba(0,186,124,0.25)">✓ git push -m "Latest commit" </text>
+                    <g class="terminal-group">
+                        <text y="100" font-family="'Courier New',monospace" font-size="13"
+                            fill="rgba(29,155,240,0.25)">$ python -m venv env</text>
+                        <text y="122" font-family="'Courier New',monospace" font-size="13"
+                            fill="rgba(0,186,124,0.3)">✓ django-admin startproject porfolio</text>
+                        <text y="144" font-family="'Courier New',monospace" font-size="13"
+                            fill="rgba(255,255,255,0.12)">$ pip install django</text>
+                        <text y="166" font-family="'Courier New',monospace" font-size="13"
+                            fill="rgba(0,186,124,0.25)">✓ git push -m "Latest commit" </text>
+                    </g>
                 </svg>
             </div>
 
@@ -84,7 +86,11 @@
                             <path d="M34 106 Q40 80 58 76 Q76 80 82 106 L82 140 L34 140Z" fill="#d4c89a" />
                             <path d="M36 52 Q40 32 58 31 Q78 31 80 51 Q70 41 58 42 Q44 42 36 52Z" fill="#3d2a10" />
                         </svg> -->
-                        <img src="image.png" alt="">
+                        <img src="imagehover.png" class="img-hover" />
+                        <img src="image.png" class="img-default">
+                        <svg class="avatar-border" viewBox="0 0 150 150">
+                            <circle cx="75" cy="75" r="70" />
+                        </svg>
                     </div>
                     <!-- <div class="online-badge"></div> -->
                 </div>
@@ -102,7 +108,7 @@
 
                 <div class="profile-name-row">
                     <h1 class="profile-name">Saroon K</h1>
-                    <span class="verified-badge" title="Verified">
+                    <span class="verified-badge mb-2" title="Verified">
                         <svg viewBox="0 0 24 24" fill="#1d9bf0">
                             <path
                                 d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91C3.38 9.33 2.5 10.57 2.5 12s.88 2.67 2.19 3.34c-.46 1.39-.2 2.9.81 3.91s2.52 1.26 3.91.8c.66 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.33-2.19c1.4.46 2.91.2 3.92-.81s1.26-2.52.8-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z" />
@@ -159,7 +165,7 @@
                 </div>
 
                 <!-- Quick stats -->
-                <div class="quick-stats ">
+                <div class="quick-stats my-3 ">
                     <div class="quick-stat">
                         <span class="qs-number" data-target="1">1+</span>
                         <span class="qs-label">Years Exp.</span>
@@ -184,14 +190,15 @@
 
 
             <div class="profile-tabs">
-                <button class="tab-btn active" data-tab="tab-projects">Projects</button>
-                <button class="tab-btn" data-tab="tab-experience">Experience</button>
+                <button class="tab-btn active" data-tab="tab-experience">Experience</button>
+
+                <button class="tab-btn " data-tab="tab-projects">Projects</button>
                 <button class="tab-btn" data-tab="tab-education">Education</button>
                 <button class="tab-btn" data-tab="tab-skills">Skills</button>
             </div>
 
 
-            <div class="tab-pane active" id="tab-projects">
+            <div class="tab-pane " id="tab-projects">
 
                 <article class="project-card reveal mb-3" data-id="1">
                     <div class="project-card-header">
@@ -291,7 +298,7 @@
 
 
 
-            <div class="tab-pane" id="tab-experience">
+            <div class="tab-pane active" id="tab-experience">
                 <div class="exp-timeline">
 
                     <div class="exp-item reveal">
@@ -540,7 +547,7 @@
                         </div>
                     </div>
 
-                    <div class="skills-group reveal mb-3">
+                    <div class="skills-group reveal mb-md-5 mb-5">
                         <div class="skills-group-title">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <ellipse cx="12" cy="5" rx="9" ry="3" />
